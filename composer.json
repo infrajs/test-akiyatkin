@@ -3,7 +3,7 @@
 	"description": "Tests for infrajs",
 	"license": "GPL3",
 	"autoload": {
-		"psr-4": { "infrajs\\test\\akiyatkin": "" }
+		"psr-4": { "infrajs\\test\\akiyatkin\\": "" }
 	},
 	"require":{
 		"infrajs/path":"~1",
