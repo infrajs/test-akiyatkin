@@ -24,7 +24,7 @@ Infra::req('controller');
 
 View::html('<div id="main"></div>', true);
 
-$layers = Load::loadJSON('*test-akiyatkin/resources/check3.json');
+$layers = Load::loadJSON('-test-akiyatkin/resources/check3.json');
 
 Crumb::change('test');
 

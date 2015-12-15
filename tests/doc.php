@@ -15,13 +15,12 @@ $ans=array();
 
 Access::test(true);
 
-$text = Docx::get('*test-akiyatkin/resources/test.docx');
+$text = Docx::get('-test-akiyatkin/resources/test.docx');
 
-
-if (!$text || mb_strlen($text) != 1058) {
+if (!$text || mb_strlen($text) != 1059) {
 	return Ans::err($ans, 'Cant read file .docx mb_strlen '.mb_strlen($text));
 }
-$preview = Docx::preview('*test-akiyatkin/resources/test.docx');
+$preview = Docx::preview('-test-akiyatkin/resources/test.docx');
 if (sizeof($preview) != 12) {
 	return Ans::err($ans, 'Cant read preview test.docx '.sizeof($preview));
 }
@@ -36,7 +35,7 @@ if (mb_strlen($preview['preview']) != 119) {
 }
 
 $name = 'test.tpl';
-$preview = Mht::preview('*test-akiyatkin/resources/'.$name);
+$preview = Mht::preview('-test-akiyatkin/resources/'.$name);
 if (sizeof($preview) != 12) {
 	return Ans::err($ans, 'Cant read preview '.$name.' '.sizeof($preview));
 }
@@ -51,13 +50,13 @@ if (mb_strlen($preview['preview']) != 521) {
 }
 
 $name = 'test.tpl';
-$text = Mht::get('*test-akiyatkin/resources/'.$name);
+$text = Mht::get('-test-akiyatkin/resources/'.$name);
 if (mb_strlen($text) != 1935) {
 	return Ans::err($ans, 'Cant read '.$name.' '.strlen($text));
 }
 
 $name = 'test.html';
-$text = Mht::get('*test-akiyatkin/resources/'.$name);
+$text = Mht::get('-test-akiyatkin/resources/'.$name);
 if (strlen($text) != 1073) {
 	return Ans::err($ans, 'Cant read '.$name.' '.strlen($text));
 }

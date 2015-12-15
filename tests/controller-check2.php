@@ -23,7 +23,7 @@ $ans['title'] = 'Проверка чек';
 
 View::html('<div id="main"></div>', true);
 
-$layers = Load::loadJSON('*test-akiyatkin/resources/check2.json');
+$layers = Load::loadJSON('-test-akiyatkin/resources/check2.json');
 $html = Controller::check($layers);
 
 preg_match_all('/x/', $html, $matches);

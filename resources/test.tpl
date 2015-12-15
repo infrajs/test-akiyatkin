@@ -37,10 +37,10 @@
 		</tr>
 		<tr>
 			<td>
-			  <a href="?Каталог/Techno Ekol/Автомойка на 2 поста"><img src="?*files/tests/resources/200439.jpeg?w=150" /></a>
+			  <a href="?Каталог/Techno Ekol/Автомойка на 2 поста"><img src="?-files/tests/resources/200439.jpeg?w=150" /></a>
 			</td>
 			 <td>
-			  <a href="?Каталог/Techno Ekol/Автомойка на 2 поста"><img src="?*files/tests/resources/200439.jpeg" /></a>
+			  <a href="?Каталог/Techno Ekol/Автомойка на 2 поста"><img src="?-files/tests/resources/200439.jpeg" /></a>
 			</td>
 		</tr>
 	</table>
