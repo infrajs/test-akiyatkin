@@ -24,7 +24,7 @@ if(!$db){
 $val=infra_session_get('test');
 
 
-$conf = Infra::config();
+$conf = Config::get();
 if (!$conf['session']['sync']) {
 	$ans['class'] = 'bg-warning';
 
