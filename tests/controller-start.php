@@ -4,7 +4,7 @@ use infrajs\ans\Ans;
 use infrajs\path\Path;
 use infrajs\view\View;
 use infrajs\load\Load;
-use infrajs\infra\Infra;
+use infrajs\infra\Config;
 
 if (!is_file('vendor/autoload.php')) {
 	chdir('../../../../');	
@@ -16,7 +16,7 @@ $ans = array('title' => 'Проверки контроллера');
 
 
 
-Infra::req('controller');
+Config::get('controller');
 
 $layer = array(
 	'data' => 1,

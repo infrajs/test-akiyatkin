@@ -1,7 +1,7 @@
 <?php
 
 namespace infrajs\controller;
-use infrajs\infra\Infra;
+use infrajs\infra\Config;
 use infrajs\path\Path;
 use infrajs\view\View;
 use infrajs\load\Load;
@@ -19,7 +19,7 @@ $ans = array();
 $ans['title'] = 'check4';
 
 
-Infra::req('controller');
+Config::get('controller');
 
 
 View::html('<div id="main1"></div><div id="main2"></div>', true);
