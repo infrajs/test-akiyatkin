@@ -5,7 +5,7 @@ use infrajs\infra\Infra;
 use infrajs\path\Path;
 use infrajs\view\View;
 use infrajs\load\Load;
-use infrajs\infra\Each;
+use infrajs\each\Each;
 use infrajs\ans\Ans;
 
 
