@@ -1,5 +1,3 @@
 {
-	"test-akiyatkin":{
-		"tester":"-test-akiyatkin/tests/"
-	}
+	"tester":"tests/"
 }

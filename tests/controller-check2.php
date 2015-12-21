@@ -2,7 +2,7 @@
 namespace infrajs\controller;
 use infrajs\view\View;
 use infrajs\ans\Ans;
-use infrajs\infra\Infra;
+use infrajs\infra\Config;
 use infrajs\path\Path;
 use infrajs\load\Load;
 
@@ -13,7 +13,7 @@ if (!is_file('vendor/autoload.php')) {
     require_once('vendor/autoload.php');
 }
 
-Infra::req('controller');
+Config::get('controller');
 
 Crumb::change('test');
 

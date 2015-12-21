@@ -4,7 +4,7 @@ namespace infrajs\controller;
 use infrajs\path\Path;
 use infrajs\view\View;
 use infrajs\load\Load;
-use infrajs\infra\Infra;
+use infrajs\infra\Config;
 use infrajs\ans\Ans;
 
 
@@ -19,7 +19,7 @@ if (!is_file('vendor/autoload.php')) {
 $ans = array();
 $ans['title'] = 'check3';
 
-Infra::req('controller');
+Config::get('controller');
 
 
 View::html('<div id="main"></div>', true);

@@ -1,7 +1,7 @@
 <?php
 namespace infrajs\event;
 use infrajs\ans\Ans;
-use infrajs\infra\Infra;
+use infrajs\infra\Config;
 
 if (!is_file('vendor/autoload.php')) {
 	chdir('../../../../');	
@@ -12,7 +12,7 @@ if (!is_file('vendor/autoload.php')) {
 $ans = array();
 $ans['title'] = 'Рекурсия в событиях';
 
-Infra::req('event');
+Config::get('event');
 Event::$conf['debug']=false;
 
 $test = '';
