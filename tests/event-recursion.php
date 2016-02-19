@@ -1,7 +1,7 @@
 <?php
 namespace infrajs\event;
 use infrajs\ans\Ans;
-use infrajs\infra\Config;
+use infrajs\config\Config;
 
 if (!is_file('vendor/autoload.php')) {
 	chdir('../../../../');	
@@ -57,8 +57,10 @@ Event::handler('ohoho', function () use (&$test) {
 
 $r=false;
 try {
+	ob_start();
 	Event::fire('ohoho');
 } catch (\Exception $e){
+	ob_end_clean();
 	$r=true;
 }
 if (!$r) return Ans::err($ans,'Должно было сработать рекурсивное исключение');

@@ -41,6 +41,9 @@ if (!$obj->is) {
 	return Ans::err($ans, 'Не применилась крошка на втором уровне');
 }
 
+
+
+
 $root = Crumb::getInstance();
 
 Crumb::change('');
@@ -61,7 +64,7 @@ $r = $r && $r2;
 $crumb = Crumb::getInstance('test');
 $crumb2 = Crumb::getInstance('test2');
 
-if (!($f == null && $r && !is_null($crumb->query) && is_null($crumb2->query))) {
+if (!($f == null && $r && !is_null($crumb->value) && is_null($crumb2->value))) {
 	return Ans::err($ans, 'Изменения крошек');
 }
 

@@ -2,7 +2,7 @@
 namespace infrajs\controller;
 use infrajs\view\View;
 use infrajs\ans\Ans;
-use infrajs\infra\Config;
+use infrajs\config\Config;
 use infrajs\path\Path;
 use infrajs\load\Load;
 

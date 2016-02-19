@@ -1,7 +1,7 @@
 <?php
 
 namespace infrajs\controller;
-use infrajs\infra\Config;
+use infrajs\config\Config;
 use infrajs\view\View;
 use infrajs\load\Load;
 use infrajs\ans\Ans;

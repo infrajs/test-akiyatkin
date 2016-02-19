@@ -17,7 +17,7 @@ Access::test(true);
 
 $text = Docx::get('-test-akiyatkin/resources/test.docx');
 
-if (!$text || mb_strlen($text) != 1059) {
+if (!$text || mb_strlen($text) != 1048) {
 	return Ans::err($ans, 'Cant read file .docx mb_strlen '.mb_strlen($text));
 }
 $preview = Docx::preview('-test-akiyatkin/resources/test.docx');

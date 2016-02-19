@@ -4,7 +4,7 @@ namespace infrajs\controller;
 use infrajs\path\Path;
 use infrajs\view\View;
 use infrajs\load\Load;
-use infrajs\infra\Config;
+use infrajs\config\Config;
 use infrajs\ans\Ans;
 
 

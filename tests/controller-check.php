@@ -4,7 +4,7 @@ namespace infrajs\controller;
 use infrajs\view\View;
 use infrajs\ans\Ans;
 use infrajs\path\Path;
-use infrajs\infra\Config;
+use infrajs\config\Config;
 
 if (!is_file('vendor/autoload.php')) {
     chdir('../../../../');
