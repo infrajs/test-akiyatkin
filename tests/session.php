@@ -14,7 +14,7 @@ $ans['title'] = 'Проверка сессии на сервере';
 $conf=Db::$conf;
 if(!$conf['db']){
 	$ans['class']='bg-warning';
-	return Ans::err($ans,'db.conf.db=false Нет разрешения на использование базы данных');
+	return Ans::ret($ans,'db.conf.db=false Нет разрешения на использование базы данных');
 }
 
 $db=&Db::pdo();

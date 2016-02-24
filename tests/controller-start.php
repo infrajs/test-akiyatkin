@@ -28,4 +28,5 @@ $html = Controller::check($layer);
 
 if ($html != 'qewr1') return Ans::err($ans,'Результат неожиданный '.$html);
 
+View::html('',true);
 return Ans::ret($ans);
