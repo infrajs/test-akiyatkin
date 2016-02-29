@@ -18,7 +18,7 @@ if (!is_file('vendor/autoload.php')) {
 $ans = array();
 $ans['title'] = 'check4';
 
-
+$query = Crumb::$query;
 Config::get('controller');
 
 
@@ -32,8 +32,12 @@ preg_match_all('/x/', $html, $matches);
 $count = sizeof($matches[0]);
 $countneed = 2;
 
-if ($count == $countneed) {
-	return Ans::ret($ans, 'ret');
-}
+Crumb::change($query);
+Layer::$start_id = 1;
+Layer::$ids = array();
+View::html('',true);
 
-return Ans::err($ans, 'err');
+if ($count != $countneed) return Ans::err($ans);
+
+return Ans::ret($ans);
+

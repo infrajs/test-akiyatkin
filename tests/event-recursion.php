@@ -13,7 +13,6 @@ $ans = array();
 $ans['title'] = 'Рекурсия в событиях';
 
 Config::get('event');
-Event::$conf['debug']=false;
 
 $test = '';
 Event::handler('ontestrec', function () use (&$test) {
@@ -73,7 +72,7 @@ Event::handler('ohoho2', function () use (&$test) {
 Event::fire('ohoho2');
 
 if ($test!='asdf') return Ans::err($ans,'Сам себя не может заблокировать');
-Event::$conf['debug']=true;
+
 
 return Ans::ret($ans);
 

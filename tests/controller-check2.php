@@ -14,7 +14,7 @@ if (!is_file('vendor/autoload.php')) {
 }
 
 Config::get('controller');
-
+$query = Crumb::$query;
 Crumb::change('test');
 
 
@@ -32,5 +32,9 @@ $count = sizeof($matches[0]);
 if ($count != 4) {
 	return Ans::err($ans, 'Нет '.$count);
 }
+Crumb::change($query);
+Layer::$start_id = 1;
+Layer::$ids = array();
+View::html('',true);
 
-return Ans::ret($ans, 'daa');
+return Ans::ret($ans);

@@ -19,7 +19,7 @@ if (!is_file('vendor/autoload.php')) {
 $ans = array();
 $ans['title'] = 'Хлебные крошки';
 
-
+$query = Crumb::$query;
 
 $obj = Crumb::getInstance('test/check');
 $parent = Crumb::getInstance('test');
@@ -71,4 +71,8 @@ if (!($f == null && $r && !is_null($crumb->value) && is_null($crumb2->value))) {
 Crumb::change('test/test');
 $inst = Crumb::getInstance('test/test/test');
 
-return Ans::ret($ans, 'Всё ок');
+Crumb::change($query);
+Layer::$start_id = 1;
+Layer::$ids = array();
+
+return Ans::ret($ans);

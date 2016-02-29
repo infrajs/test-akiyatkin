@@ -14,8 +14,6 @@ if (!is_file('vendor/autoload.php')) {
 $ans = array('title' => 'Проверки контроллера');
 
 
-
-
 Config::get('controller');
 
 $layer = array(
@@ -23,10 +21,14 @@ $layer = array(
 	'tpl' => array('qewr{data}')
 );
 View::html('',true);
+$query = Crumb::$query;
+
 Crumb::change('');
 $html = Controller::check($layer);
 
 if ($html != 'qewr1') return Ans::err($ans,'Результат неожиданный '.$html);
 
+Crumb::change($query);
 View::html('',true);
+
 return Ans::ret($ans);

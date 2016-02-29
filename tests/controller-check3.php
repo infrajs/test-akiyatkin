@@ -20,7 +20,7 @@ $ans = array();
 $ans['title'] = 'check3';
 
 Config::get('controller');
-
+$query = Crumb::$query;
 
 View::html('<div id="main"></div>', true);
 
@@ -35,6 +35,11 @@ $count = sizeof($matches[0]);
 $countneed = 4;
 
 if ($count != $countneed) return Ans::err($ans, 'Неожиданный результат '.$count);
+Crumb::change($query);
+Layer::$start_id = 1;
+Layer::$ids = array();
+View::html('',true);
+
 
 return Ans::ret($ans, 'ret');
 

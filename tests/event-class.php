@@ -7,8 +7,7 @@ if (!is_file('vendor/autoload.php')) {
 	chdir('../../../../');	
 	require_once('vendor/autoload.php');
 }
-
-
+/*
 $ans = array();
 $ans['title'] = 'Классы.событий';
 
@@ -27,7 +26,7 @@ $r=Event::fire('test.ontest', $obj);
 
 if($test!='ab'||!$r) return Ans::err($ans,'Событие с объектом '.$test);
 
-
+*/
 
 $obj1=array('id'=>1);
 $obj2=array('id'=>2);

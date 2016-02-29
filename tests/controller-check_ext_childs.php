@@ -12,7 +12,7 @@ if (!is_file('vendor/autoload.php')) {
     chdir('../../../../');
     require_once('vendor/autoload.php');
 }
-
+$query = Crumb::$query;
 $ans = array();
 $ans['title'] = 'check_ext_childs';
 
@@ -29,6 +29,10 @@ $count = sizeof($matches[0]);
 $countneed = 2;
 
 if ($count != $countneed) return Ans::err($ans, 'line:'.__LINE__.' '.$count);	
+Crumb::change($query);
+Layer::$start_id = 1;
+Layer::$ids = array();
+View::html('',true);
 
-return Ans::ret($ans, 'ret');
+return Ans::ret($ans);
 
