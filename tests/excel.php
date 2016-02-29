@@ -4,6 +4,7 @@ namespace infrajs\excel;
 
 use infrajs\access\Access;
 use infrajs\ans\Ans;
+use infrajs\config\Config;
 
 Access::test(true);
 $ans = array();
