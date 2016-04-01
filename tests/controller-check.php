@@ -23,7 +23,6 @@ Config::get('controller');
 Crumb::init();
 
 
-
 $layer = array('tpl' => array('хой<div id="test"></div>'),'div' => 'oh');
 $html=Controller::check($layer);
 
@@ -34,7 +33,6 @@ $layer = array('tpl' => array('опа'),'div' => 'test');
 $html = Controller::check($layer);
 if ($html != '<div id="oh">хой<div id="test">опа</div></div>') return Ans::err($ans, 'Ошибка '.$html);
 
-Crumb::change($query);
 
 Layer::$start_id = 1;
 Layer::$ids = array();
