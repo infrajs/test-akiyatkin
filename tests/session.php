@@ -1,7 +1,7 @@
 <?php
-namespace infrajs\session;
 use infrajs\ans\Ans;
 use infrajs\db\Db;
+use infrajs\session\Session;
 
 if (!is_file('vendor/autoload.php')) {
 	chdir('../../../../');
@@ -11,7 +11,7 @@ if (!is_file('vendor/autoload.php')) {
 $ans = array();
 $ans['title'] = 'Проверка сессии на сервере';
 
-$conf=Db::$conf;
+$conf = Db::$conf;
 if(!$conf['db']){
 	$ans['class']='bg-warning';
 	return Ans::ret($ans,'db.conf.db=false Нет разрешения на использование базы данных');
@@ -21,7 +21,7 @@ $db=&Db::pdo();
 if(!$db){
 	return Ans::err($ans,'Не удалось соединиться с базой данных');
 }
-$val=infra_session_get('test');
+$val=Session::get('test');
 
 
 $conf = Config::get();
@@ -37,12 +37,12 @@ $db = &Db::pdo();
 if (!$db) {
 	return Ans::err($ans, 'ERROR нет базы данных');
 }
-$val = infra_session_get('test');
+$val = Session::get('test');
 
 $val = (int) $val + 1;
-infra_session_set('test', $val);
+Session::set('test', $val);
 
-$d = infra_session_get();
+$d = Session::get();
 $ans['test'] = $d['test'];
 if ($d['test'] > 1) {
 	return Ans::ret($ans, 'PASS');
