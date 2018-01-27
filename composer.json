@@ -2,7 +2,6 @@
 	"name": "infrajs/test-akiyatkin",
 	"homepage":"https://github.com/infrajs/test-akiyatkin",
 	"description": "Tests for infrajs",
-	"license": "GPL3",
 	"require":{
 		"infrajs/path":"~1",
 		"infrajs/tester":"~1",
